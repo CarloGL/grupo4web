@@ -37,7 +37,7 @@ app.post('/api/login', async (req, res) => {
     
     // Aquí deberías verificar las credenciales contra tu base de datos
     // Este es un ejemplo simplificado
-    if (email === "usuario@example.com" && password === "password123") {
+    if (email === "grupo4@example.com" && password === "grupo123") {
         const user = { id: 1, email: email };
         const accessToken = jwt.sign(user, process.env.JWT_SECRET);
         res.json({ token: accessToken });
