@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Grupo 4</title>
     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
@@ -58,6 +59,105 @@
                                 demostrando la implementación de un sistema de autenticación moderno y seguro.
                             </p>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center mt-4">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">Implementación de MongoDB Atlas</h2>
+                    <div class="alert alert-info">
+                        <strong>Base de Datos:</strong> MongoDB Atlas (Plan Free)
+                    </div>
+                    <h4 class="mt-3">¿Por qué elegimos MongoDB Atlas?</h4>
+                    <ul class="list-group list-group-flush mb-3">
+                        <li class="list-group-item">
+                            <i class="bi bi-check-circle-fill text-success"></i>
+                            Base de datos NoSQL en la nube con un generoso plan gratuito
+                        </li>
+                        <li class="list-group-item">
+                            <i class="bi bi-check-circle-fill text-success"></i>
+                            Fácil integración con Node.js a través de Mongoose
+                        </li>
+                        <li class="list-group-item">
+                            <i class="bi bi-check-circle-fill text-success"></i>
+                            Interfaz visual intuitiva para gestionar datos
+                        </li>
+                        <li class="list-group-item">
+                            <i class="bi bi-check-circle-fill text-success"></i>
+                            Escalabilidad y alta disponibilidad sin costo adicional
+                        </li>
+                    </ul>
+    
+                    <h4>Proceso de Implementación</h4>
+                    <div class="accordion mt-3" id="accordionMongoDB">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                    1. Creación de la Cuenta
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionMongoDB">
+                                <div class="accordion-body">
+                                    Nos registramos en <a href="https://www.mongodb.com/cloud/atlas" target="_blank">MongoDB Atlas</a> y creamos una cuenta gratuita que nos ofrece:
+                                    <ul>
+                                        <li>512 MB de almacenamiento</li>
+                                        <li>Compartido RAM</li>
+                                        <li>Backend serverless</li>
+                                        <li>Multi-región disponible</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                    2. Configuración del Cluster
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionMongoDB">
+                                <div class="accordion-body">
+                                    <ol>
+                                        <li>Creamos un nuevo cluster en la región más cercana</li>
+                                        <li>Configuramos el acceso IP para permitir conexiones</li>
+                                        <li>Creamos usuario y contraseña para la base de datos</li>
+                                        <li>Obtuvimos la URI de conexión para nuestro proyecto</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                    3. Integración con Node.js
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionMongoDB">
+                                <div class="accordion-body">
+                                    Implementamos la conexión utilizando:
+                                    <ul>
+                                        <li>Mongoose como ODM (Object Data Modeling)</li>
+                                        <li>Variables de entorno para credenciales seguras</li>
+                                        <li>Modelos para estructura de datos de usuarios</li>
+                                        <li>Métodos de autenticación y validación</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <h4 class="mt-4">Aprendizajes Clave</h4>
+                    <div class="card-text">
+                        <p>Durante la implementación de MongoDB Atlas, aprendimos:</p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Gestión de bases de datos NoSQL en la nube</li>
+                            <li class="list-group-item">Configuración de seguridad y acceso a bases de datos</li>
+                            <li class="list-group-item">Modelado de datos con Mongoose</li>
+                            <li class="list-group-item">Buenas prácticas en el manejo de credenciales</li>
+                        </ul>
                     </div>
                 </div>
             </div>

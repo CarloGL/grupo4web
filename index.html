@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bebas-neue/2.0.0/bebas-neue.min.css" rel="stylesheet">
+    <style>
+        
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .product-card {
+            border-radius: 5px;
+            position: relative;
+            background: white;
+            border: 1px solid #ddd;
+            padding: 0px 0 10px 0;
+            text-align: center;
+            text-decoration: none;
+            color: black;
+            transition: all 0.3s ease;
+        }
+
+        .product-card:hover,
+        .product-card:active {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .product-image {
+            width: 100%;
+            height: auto;
+            margin-bottom:5px; /* Reducido de 10px a 5px */
+        }
+
+        .pre-sale-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: black;
+            color: white;
+            padding: 5px 10px;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 16px;
+            animation: colorChange 0.6s infinite alternate;
+        }
+
+        @keyframes colorChange {
+            from {
+                background-color: black;
+            }
+            to {
+                background-color: #d80303;
+            }
+        }
+
+        .discount-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: black;
+            color: white;
+            padding: 5px 10px;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 16px;
+        }
+
+        .product-info {
+            margin: 0;
+            line-height: 1.5;  /* Reducido de 1.2 a 1 */
+        }
+
+        .product-info h3{
+            color: #000;
+            font-size: 30px;
+        }
+
+        .product-name {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 40px;
+            margin: 0 0 2px 0; /* Añadido margen inferior mínimo */
+            color: black;
+            line-height: 0; /* Añadido para reducir espacio vertical */
+        }
+
+        .price-container {
+            margin: -15px 0 -20px 0; /* Reducido de 5px 0 15px 0 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .original-price {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 24px;
+            color: #999;
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+
+        .product-price {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 30px;
+            color: black;
+            margin: 0;
+            line-height: 0; /* Añadido para control de espacio */
+        }
+
+        .buy-now-btn {
+            display: inline-block;
+            background: black;
+            color: white;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 20px;
+            padding: 5px 30px; /* Reducido el padding vertical de 10px a 5px */
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            border: 2px solid black;
+            margin-top: -20px; /* Añadido pequeño margen superior */
+        }
+
+        .buy-now-btn:hover,
+        .buy-now-btn:active {
+            background: white;
+            color: black;
+        }
+
+        @media (max-width: 768px) {
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .product-name {
+                font-size: 32px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="product-grid">
+        <!-- Ejemplo de producto con descuento -->
+        <div class="product-card">
+            <div class="pre-sale-badge">Black Friday</div>
+            <img src="https://runway7fashion.com/wp-content/uploads/2024/11/nyfw2025-merch2.png" alt="Producto 1" class="product-image">
+            <div class="product-info">
+                <h3 class="product-name">Black zip up hoodie</h3>
+                <div class="price-container">
+                    <p class="original-price">$100.00</p>
+                    <p class="product-price">$50.00</p>
+                </div>
+                <a href="https://nyfwstore.com/products/black-zip-up-hoddie?utm_source=copyToPasteBoard&utm_medium=product-links&utm_content=web" class="buy-now-btn">BUY NOW</a>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="pre-sale-badge">Black Friday</div>
+            <img src="https://runway7fashion.com/wp-content/uploads/2024/11/nyfw2025-merch1.png" alt="Producto 2" class="product-image">
+            <div class="product-info">
+                <h3 class="product-name">White pull over hoodie</h3>
+                <div class="price-container">
+                    <p class="original-price">$100.00</p>
+                    <p class="product-price">$50.00</p>
+                </div>
+                <a href="https://nyfwstore.com/products/white-pull-over-hoodie?utm_source=copyToPasteBoard&utm_medium=product-links&utm_content=web" class="buy-now-btn">BUY NOW</a>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="pre-sale-badge">Black Friday</div>
+            <img src="https://runway7fashion.com/wp-content/uploads/2024/11/nyfw2025-merch3.png" alt="Producto 3" class="product-image">
+            <div class="product-info">
+                <h3 class="product-name">Black pull over hoodie</h3>
+                <div class="price-container">
+                    <p class="original-price">$100.00</p>
+                    <p class="product-price">$50.00</p>
+                </div>
+                <a href="https://nyfwstore.com/products/black-pull-over-hoodie?utm_source=copyToPasteBoard&utm_medium=product-links&utm_content=web" class="buy-now-btn">BUY NOW</a>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="pre-sale-badge">PRE SALE</div>
+            <img src="https://runway7fashion.com/wp-content/uploads/2024/11/limited-edition-nyfw.png" alt="Producto 1" class="product-image">
+            <div class="product-info">
+                <h3 class="product-name">limited edition hoodie</h3>
+                <div class="price-container">
+                    <p class="original-price">$125.00</p>
+                    <p class="product-price">$62.50</p>
+                </div>
+                <a href="https://nyfwstore.com/products/limited-edition-hoodie?utm_source=copyToPasteBoard&utm_medium=product-links&utm_content=web" class="buy-now-btn">BUY NOW</a>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="pre-sale-badge">Black Friday</div>
+            <img src="https://runway7fashion.com/wp-content/uploads/2024/11/nyfw2025-merch7.png" alt="Producto 2" class="product-image">
+            <div class="product-info">
+                <h3 class="product-name">nyfw classic black tee</h3>
+                <div class="price-container">
+                    <p class="original-price">$50.00</p>
+                    <p class="product-price">$25.00</p>
+                </div>
+                <a href="https://nyfwstore.com/products/nyfw-classic-black-tee?utm_source=copyToPasteBoard&utm_medium=product-links&utm_content=web" class="buy-now-btn">BUY NOW</a>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="pre-sale-badge">Black Friday</div>
+            <img src="https://runway7fashion.com/wp-content/uploads/2024/11/nyfw2025-merch8.png" alt="Producto 3" class="product-image">
+            <div class="product-info">
+                <h3 class="product-name">nyfw classic white tee</h3>
+                <div class="price-container">
+                    <p class="original-price">$50.00</p>
+                    <p class="product-price">$25.00</p>
+                </div>
+                <a href="https://nyfwstore.com/products/nyfw-classic-white-tee?utm_source=copyToPasteBoard&utm_medium=product-links&utm_content=web" class="buy-now-btn">BUY NOW</a>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="pre-sale-badge">Black Friday</div>
+            <img src="https://runway7fashion.com/wp-content/uploads/2024/11/jacket-nyfw.png" alt="Producto 1" class="product-image">
+            <div class="product-info">
+                <h3 class="product-name">nyfw runway jacket</h3>
+                <div class="price-container">
+                    <p class="original-price">$150.00</p>
+                    <p class="product-price">$75.00</p>
+                </div>
+                <a href="https://nyfwstore.com/products/nyfw-runway-jacket?utm_source=copyToPasteBoard&utm_medium=product-links&utm_content=web" class="buy-now-btn">BUY NOW</a>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="pre-sale-badge">Black Friday</div>
+            <img src="https://runway7fashion.com/wp-content/uploads/2024/11/nyfw2025-merch11.png" alt="Producto 2" class="product-image">
+            <div class="product-info">
+                <h3 class="product-name">nyfw puffer vest</h3>
+                <div class="price-container">
+                    <p class="original-price">$100.00</p>
+                    <p class="product-price">$50.00</p>
+                </div>
+                <a href="https://nyfwstore.com/products/nyfw-puffer-vest?utm_source=copyToPasteBoard&utm_medium=product-links&utm_content=web" class="buy-now-btn">BUY NOW</a>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="pre-sale-badge">PRE SALE</div>
+            <img src="https://runway7fashion.com/wp-content/uploads/2024/11/tank-top-nyfw.png" alt="Producto 3" class="product-image">
+            <div class="product-info">
+                <h3 class="product-name">nyfw black tank top</h3>
+                <div class="price-container">
+                    <p class="original-price">$50.00</p>
+                    <p class="product-price">$25.00</p>
+                </div>
+                <a href="https://nyfwstore.com/products/nyfw-black-tank-top?utm_source=copyToPasteBoard&utm_medium=product-links&utm_content=web" class="buy-now-btn">BUY NOW</a>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="pre-sale-badge">Black Friday</div>
+            <img src="https://runway7fashion.com/wp-content/uploads/2024/11/nyfw2025-merch9.png" alt="Producto 3" class="product-image">
+            <div class="product-info">
+                <h3 class="product-name">nyfw model robe</h3>
+                <div class="price-container">
+                    <p class="original-price">$75.00</p>
+                    <p class="product-price">$37.50</p>
+                </div>
+                <a href="https://nyfwstore.com/products/nyfw-model-robe?utm_source=copyToPasteBoard&utm_medium=product-links&utm_content=web" class="buy-now-btn">BUY NOW</a>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="pre-sale-badge">Black Friday</div>
+            <img src="https://runway7fashion.com/wp-content/uploads/2024/11/nyfw2025-merch5.png" alt="Producto 3" class="product-image">
+            <div class="product-info">
+                <h3 class="product-name">nyfw black cap</h3>
+                <div class="price-container">
+                    <p class="original-price">$50.00</p>
+                    <p class="product-price">$25.00</p>
+                </div>
+                <a href="https://nyfwstore.com/products/nyfw-black-cap?utm_source=copyToPasteBoard&utm_medium=product-links&utm_content=web" class="buy-now-btn">BUY NOW</a>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="pre-sale-badge">Black Friday</div>
+            <img src="https://runway7fashion.com/wp-content/uploads/2024/11/nyfw2025-merch10.png" alt="Producto 3" class="product-image">
+            <div class="product-info">
+                <h3 class="product-name">nyfw handled mini</h3>
+                <div class="price-container">
+                    <p class="original-price">$50.00</p>
+                    <p class="product-price">$25.00</p>
+                </div>
+                <a href="https://nyfwstore.com/products/nyfw-handled-mini?utm_source=copyToPasteBoard&utm_medium=product-links&utm_content=web" class="buy-now-btn">BUY NOW</a>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="pre-sale-badge">Black Friday</div>
+            <img src="https://runway7fashion.com/wp-content/uploads/2024/11/nyfw2025-merch12.png" alt="Producto 3" class="product-image">
+            <div class="product-info">
+                <h3 class="product-name">nyfw pvc bag</h3>
+                <div class="price-container">
+                    <p class="original-price">$150.00</p>
+                    <p class="product-price">$75.00</p>
+                </div>
+                <a href="https://nyfwstore.com/products/nyfw-pvc-bag-black-and-white?utm_source=copyToPasteBoard&utm_medium=product-links&utm_content=web" class="buy-now-btn">BUY NOW</a>
+            </div>
+        </div>
+        
+        <div class="product-card">
+            <div class="pre-sale-badge">Black Friday</div>
+            <img src="https://runway7fashion.com/wp-content/uploads/2024/11/nyfw2025-merch14.png" alt="Producto 3" class="product-image">
+            <div class="product-info">
+                <h3 class="product-name">nyfw tag</h3>
+                <div class="price-container">
+                    <p class="original-price">$50.00</p>
+                    <p class="product-price">$25.00</p>
+                </div>
+                <a href="https://nyfwstore.com/products/nyfw-tag?utm_source=copyToPasteBoard&utm_medium=product-links&utm_content=web" class="buy-now-btn">BUY NOW</a>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="pre-sale-badge">Black Friday</div>
+            <img src="https://runway7fashion.com/wp-content/uploads/2024/11/nyfw2025-merch15.png" alt="Producto 3" class="product-image">
+            <div class="product-info">
+                <h3 class="product-name">nyfw umbrella</h3>
+                <div class="price-container">
+                    <p class="original-price">$50.00</p>
+                    <p class="product-price">$25.00</p>
+                </div>
+                <a href="https://nyfwstore.com/products/nyfw-umbrella?utm_source=copyToPasteBoard&utm_medium=product-links&utm_content=web" class="buy-now-btn">BUY NOW</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
